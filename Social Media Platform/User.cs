@@ -7,7 +7,7 @@ namespace Social_Media_Platform
 		[Key()]
 		public int Id { get; set; }
 
-		[Required(ErrorMessage = "Come on, don't leave your name blunk!")]
+		[Required(ErrorMessage = "Come on, don't leave your name blank!")]
 		[StringLength(50, MinimumLength = 2, ErrorMessage = "Your name should be between 2 and 50 characters.")]
 		public string FirstName { get; set; }
 
@@ -39,6 +39,8 @@ namespace Social_Media_Platform
 
 		[DataType(DataType.DateTime)]
 		public DateTime LastLogin { get; set; }
+
+		public ICollection<Post> Posts { get; set; }
 
 		public User()
 		{

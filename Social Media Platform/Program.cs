@@ -1,5 +1,6 @@
 ﻿namespace Social_Media_Platform;
 
+
 public class Program
 {
     public static void Main(string[] args)
